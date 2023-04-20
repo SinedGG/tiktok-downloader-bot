@@ -14,7 +14,7 @@ module.exports = (url) => {
       var res = _eval(html);
       res = res.replace(/\\/g, " ");
       var str = cheerio.load(res);
-      str = str(`.down-right`)[0].children[0].attribs.href;
+      str = str(`.video-links`)[0].children[0].attribs.href;
 
       if (!str.includes(`snaptik.app/`)) str = `https://snaptik.app` + str;
 
